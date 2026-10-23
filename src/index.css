@@ -152,6 +152,11 @@ h3 {
     margin-right: 0;
 }
 
+.detalhe .link {
+    text-decoration: none;
+    color: #ffaad9;
+}
+
 .card:hover { 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
 }
@@ -179,6 +184,25 @@ textarea {
     display: flex;
     float: right;
     gap: 16px;
+}
+
+.confirmacao {
+    background-color: white;
+    margin: 16px auto;
+    width: 50%;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.confirmacao p {
+    margin-top: 60px;
+    padding-top: 12px;
+}
+
+.confirmacao div {
+    display: flex;
+    margin-top: 8px;
+    justify-content: center;
 }
 
 .tag { 

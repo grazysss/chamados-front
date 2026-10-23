@@ -68,7 +68,7 @@ function Detalhes() {
 
     return (
         <div className="detalhe">
-            <Link to="/">← Voltar</Link>
+            <Link to="/" className="link">Voltar</Link>
 
             <div className="card-detalhe">
                 <h2>{chamado.titulo}</h2>
@@ -121,9 +121,11 @@ function Detalhes() {
 
                 {confirmando && (
                     <div className="confirmacao">
-                    <p>Tem certeza que deseja excluir este chamado?</p>
-                    <button className="perigo" onClick={excluir}>Excluir</button> {/* excluindo de verdade, quando Confirmando = true */}
-                    <button onClick={() => setConfirmando(false)}>Cancelar</button> 
+                        <p>Tem certeza que deseja excluir este chamado?</p>
+                        <div>
+                            <button className="perigo" onClick={excluir}>Excluir</button> {/* excluindo de verdade, quando Confirmando = true */}
+                            <button onClick={() => setConfirmando(false)}>Cancelar</button> 
+                        </div>
                     </div>
                 )}
         </div>
