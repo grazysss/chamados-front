@@ -45,8 +45,8 @@ function Inicio() {
 
             // só envia o filtro se estiver preenchido
             const params = {}
-            if (busca) paramssca = busca
-            if (status) paramss = status
+            if (busca) params.busca = busca
+            if (status) params.status = status
             if (tipo) params.tipo = tipo
             if (local) params.local = local
             if (prioridade) params.prioridade = prioridade
