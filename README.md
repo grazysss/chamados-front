@@ -99,4 +99,5 @@ src/
 > O arquivo `.env` não é enviado ao GitHub. Cada pessoa precisa criar o seu com a sua própria chave.
 
 ## API
+- Vídeo de apresentação: https://youtu.be/GWgTGu2VNOE
 - Documentação: https://api-chamados.jefersonqueiroga.com.br/docs
