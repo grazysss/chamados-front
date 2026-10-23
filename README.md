@@ -14,7 +14,7 @@ Permite abrir chamados, acompanhar o atendimento e registrar a solução de cada
 <!-- 1) Salve o print na raiz do projeto com o nome print-home.png -->
 <!-- 2) O print deve mostrar o seu nome no topo e a lista com os seus chamados -->
 
-![Início](image.png)
+![Início](src/assets/image.png)
 
 ---
 
@@ -24,14 +24,14 @@ Permite abrir chamados, acompanhar o atendimento e registrar a solução de cada
 
 <!-- Salve como print-detalhe.png (opcional) -->
 
-![Detalhe](image-1.png)
+![Detalhe](src/assets/image-1.png)
 
 ### Formulário (abrir e editar)
 
 <!-- Salve como print-formulario.png (opcional) -->
 
-![Formulário](image-2.png)
-![Editando](image-3.png)
+![Formulário](src/assets//image-2.png)
+![Editando](src/assets//image-3.png)
 
 ---
 
