@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
 import Inicio from "./pages/Inicio"
-import Detalhe from "./pages/Detalhe"
+import Detalhes from "./pages/Detalhes"
 import Formulario from "./pages/Formulario"
 import api from "./services/api"
 
@@ -11,12 +11,12 @@ function App() {
     <> 
       <Header />
       <main className="container">
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/chamado/:id" element={<Detalhe />} />
+          <Route path="/chamado/:id" element={<Detalhes />} />
           <Route path="/novo" element={<Formulario />} />
           <Route path="/editar/:id" element={<Formulario />} />
-        </Routes>
+        </Routes> */}
       </main>
     </>
   )
