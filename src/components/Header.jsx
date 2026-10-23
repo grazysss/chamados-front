@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import api from "../services/api"
 
-export default function Header() {
+function Header() {
     const [dono, setDono] = useState(null)
 
     useEffect(() => {
@@ -24,3 +24,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header

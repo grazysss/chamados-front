@@ -6,17 +6,18 @@
 // // import Formulario from "./pages/Formulario"
 // import api from "./services/api"
 
-import { useEffect } from "react"
-import { buscarListas } from "./services/listas"
+import Header from "./components/Header"
 
-function App() {
-  useEffect(() => {
-    buscarListas().then((l) => console.log(l))
-  }, [])
-  return <h1>Sistema de chamados</h1>
+export default function App() {
+  return (
+    <>
+      <Header />
+      <main>
+        <h1>Sistema de chamados</h1>
+      </main>
+    </>
+  )
 }
-
-export default App
 
 // <> // anulando a div <> e </> 
 //   <Header />
