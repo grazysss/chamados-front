@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import api from "../services/api"
 import { buscarListas } from "../services/listas"
 import { mensagemDeErro } from "../utils/helpers"
+import api from "../services/api"
 
 function Inicio() {
     const [chamados, setChamados] = useState([])
@@ -65,8 +65,8 @@ function Inicio() {
     return (
         <div>
         <div className="top-lista">
-            <h2>Chamados</h2>
-            <Link to="/novo" className="botao">+ Abrir chamado</Link>
+            <h1>Chamados</h1>
+            <Link to="/novo" className="botao">Abrir chamado</Link>
         </div>
 
         <input
@@ -81,9 +81,9 @@ function Inicio() {
                 value={status} 
                 onChange={(e) => setStatus(e.target.value)}>
             <option value="">Status</option>
-            <option value="aberto">aberto</option>
-            <option value="em andamento">em andamento</option>
-            <option value="resolvido">resolvido</option>
+            <option value="aberto">Aberto</option>
+            <option value="em andamento">Em andamento</option>
+            <option value="resolvido">Resolvido</option>
             </select>
 
             <select 
@@ -115,14 +115,16 @@ function Inicio() {
             <p>Nenhum chamado encontrado.</p>
         )}
 
-        {!carregando && chamados.map((c) => (
-            <Link to={`/chamado/${c.id}`} key={c.id} className="card">
-            <strong>{c.titulo}</strong>
-            <span>{c.local} · {c.tipo}</span>
-            <span className={`tag ${c.status.replace(" ", "-")}`}>{c.status}</span>
-            <span className="tag">{c.prioridade}</span>
-            </Link>
-        ))}
+        <div className="cards">
+            {!carregando && chamados.map((c) => (
+                <Link to={`/chamado/${c.id}`} key={c.id} className="card">
+                <strong>{c.titulo}</strong>
+                <span>{c.local} · {c.tipo}</span>
+                <span className={`tag ${c.status.replace(" ", "-")}`}>{c.status}</span>
+                <span className="tag">{c.prioridade}</span>
+                </Link>
+            ))}
+        </div>
         </div>
     )
 }

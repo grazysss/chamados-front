@@ -19,8 +19,8 @@ function Header() {
 
     return (
         <header className="header">
-        <Link to="/" className="logo">MAINtenance</Link>
-        <span>Olá, {dono ? dono.nome : "..."}</span>
+        <Link to="/" className="logo">MAINtenance!</Link>
+        <span>Oii, {dono ? dono.nome : "..."}</span>
         </header>
     )
 }

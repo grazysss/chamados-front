@@ -87,40 +87,53 @@ function Formulario() {
 
     return (
         <form onSubmit={salvar} className="formulario">
-        <h2>{editando ? "Editar chamado" : "Abrir chamado"}</h2>
+            <h2>{editando ? "Editar chamado" : "Abrir chamado"}</h2>
 
-        <label>Título</label>
-        <input name="titulo" value={form.titulo} onChange={mudar} />
+            <label>Título</label> <br />
+            <input name="titulo" value={form.titulo} onChange={mudar} /> <br />
+            <br />
+            <label>Descrição</label> <br />
+            <textarea name="descricao" value={form.descricao} onChange={mudar} />
+            <br />
 
-        <label>Descrição</label>
-        <textarea name="descricao" value={form.descricao} onChange={mudar} />
+            <div className="forms-selects">
+                <div>
+                    <label>Tipo</label> <br />
+                    <select name="tipo" value={form.tipo} onChange={mudar}>
+                        <option value="">Selecione</option>
+                        {tipos.map((t) => <option key={t} value={t}>{t}</option>)}
+                    </select>
+                </div>
+                <div>
+                    <label>Local</label> <br />
+                    <select name="local" value={form.local} onChange={mudar}>
+                        <option value="">Selecione</option>
+                        {locais.map((l) => <option key={l} value={l}>{l}</option>)}
+                    </select>
+                    <br />
+                </div>
 
-        <label>Tipo</label>
-        <select name="tipo" value={form.tipo} onChange={mudar}>
-            <option value="">Selecione</option>
-            {tipos.map((t) => <option key={t} value={t}>{t}</option>)}
-        </select>
+                <div>
+                    <label>Prioridade</label> <br />
+                    <select name="prioridade" value={form.prioridade} onChange={mudar}>
+                        <option value="">Selecione</option>
+                        {prioridades.map((p) => <option key={p} value={p}>{p}</option>)}
+                    </select>
+                </div>
+            </div>
 
-        <label>Local</label>
-        <select name="local" value={form.local} onChange={mudar}>
-            <option value="">Selecione</option>
-            {locais.map((l) => <option key={l} value={l}>{l}</option>)}
-        </select>
+            <div className="data-abertura"> 
+                <label>Data de abertura</label> <br />
+                <input type="date" name="data_abertura" value={form.data_abertura} onChange={mudar} />
+            </div>
 
-        <label>Prioridade</label>
-        <select name="prioridade" value={form.prioridade} onChange={mudar}>
-            <option value="">Selecione</option>
-            {prioridades.map((p) => <option key={p} value={p}>{p}</option>)}
-        </select>
+            {erro && <p className="erro">{erro}</p>}
+            {sucesso && <p className="sucesso">{sucesso}</p>}
 
-        <label>Data de abertura</label>
-        <input type="date" name="data_abertura" value={form.data_abertura} onChange={mudar} />
-
-        {erro && <p className="erro">{erro}</p>}
-        {sucesso && <p className="sucesso">{sucesso}</p>}
-
-        <button type="submit">Salvar</button>
-        <button type="button" onClick={() => navigate(-1)}>Cancelar</button>
+            <div className="botoes-forms">
+                <button type="submit">Salvar</button>
+                <button type="button" onClick={() => navigate(-1)}>Cancelar</button>
+            </div>
         </form>
     )
 }
